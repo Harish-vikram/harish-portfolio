@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Certificates | HarishS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at top left, #1c1c1c, #000);
+      color: #fff;
+      padding: 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2.5rem;
+    }
+
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      padding: 1rem;
+    }
+
+    .cert-card {
+      perspective: 1000px;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .cert-inner {
+      position: relative;
+      width: 100%;
+      height: 220px;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
+    .cert-card:hover .cert-inner {
+      transform: rotateY(180deg);
+    }
+
+    .cert-front, .cert-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .cert-front {
+      background: rgba(255, 255, 255, 0.05);
+      font-size: 1.2rem;
+      flex-direction: column;
+    }
+
+    .cert-front img {
+      width: 100%;
+      height: auto;
+      max-height: 100px;
+      object-fit: contain;
+      margin-bottom: 0.5rem;
+      border-radius: 5px;
+      transition: transform 0.3s ease;
+    }
+
+    .cert-card:hover .cert-front img {
+      transform: scale(1.05);
+    }
+
+    .cert-back {
+      background: rgba(0, 0, 0, 0.9);
+      color: #00e6e6;
+      transform: rotateY(180deg);
+      font-size: 0.95rem;
+    }
+
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      font-size: 0.9rem;
+      opacity: 0.6;
+    }
+  </style>
+</head>
+<body>
+  <h1>My Certificates</h1>
+
+  <div class="cert-grid">
+    <div class="cert-card">
+      <div class="cert-inner">
+        <div class="cert-front">
+          <img src="asset/intership.jpg" alt="Meta Front-End Developer Preview">
+         Web Development Internship
+        </div>
+        <div class="cert-back">Web Intern | NSIC | 2023</div>
+      </div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-inner">
+        <div class="cert-front">
+          <img src="asset/confrence.jpg" alt="Prompt Engineering Preview">
+          Final Year Confrence 
+        </div>
+        <div class="cert-back">Project confrence | Prince Shree Venkateshware College | 2025</div>
+      </div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-inner">
+        <div class="cert-front">
+          <img src="asset/pythonbeg.jpg" alt="AI for Everyone Preview">
+          Python Basics
+        </div>
+        <div class="cert-back">Python | Coursera | 2023
+        </div>
+      </div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-inner">
+        <div class="cert-front">
+          <img src="asset/conex.jpg" alt="Full-Stack Web Dev Preview">
+          Symposium Second Prize
+        </div>
+        <div class="cert-back">Pinacle | Eswari College | 2022</div>
+      </div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-inner">
+        <div class="cert-front">
+          <img src="asset/javascript.jpg" alt="JavaScript Algorithms Preview">
+          JavaScript Algorithms
+        </div>
+        <div class="cert-back">
+            freeCodeCamp | 300 hrs | 2025</div>
+      </div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-inner">
+        <div class="cert-front">
+          <img src="asset/dataanalytics.jpg" alt="Python for Data Science Preview">
+          Data Analytics with Excel
+        </div>
+        <div class="cert-back">Excel | Coursera | 2024</div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 HarishS | All Rights Reserved
+  </footer>
+</body>
+</html>
